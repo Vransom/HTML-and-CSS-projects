@@ -1,0 +1,11 @@
+p{
+	color:white;
+	background:turquoise;
+	font-size:large;
+	text-align:center;
+}
+h1{
+	font-size:large;
+	text-align:center;
+	text-shadow: 2px 2px #ff0000;
+}
