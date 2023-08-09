@@ -1,0 +1,141 @@
+
+/*Navbar*/
+.navbar {
+    background-color:grey;
+    color: white;
+}
+
+.navbar a {
+    color:white
+}
+
+.navbar:hover {
+    color:yellow;
+}
+
+ul {
+    color:white;
+    list-style-type:none;
+}
+
+li{
+    color:white;
+}
+
+/*Image with text over it*/
+.center {
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:50%;
+    filter: saturate(150%);
+    border-radius:20px;
+}
+
+.container {
+    position:relative;
+    text-align: center;
+    color: black;
+}
+
+.centered {
+    position:absolute;
+    top:50%;
+    bottom:50%;
+    left:50%;
+}
+
+/*footer*/
+.footer {
+    text-align: center;
+    font-weight:bold;
+}
+
+/*Table*/
+.table {
+    border:2px solid;
+    padding-left: 50px;
+    padding-right:50px;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+th {
+    background-color:blue;
+}
+
+/*column*/
+.column {
+    float:left;
+    width:50%;
+    Height:300px;
+    color:aquamarine;
+}
+
+.row:after{
+    content:"";
+    display:table;
+    clear:both;
+}
+
+/* text with hover over it*/
+.text2:hover {
+    background-color:yellow;
+}
+
+/*image with text hover over it*/
+.container1 {
+    position:relative;
+    width:50%;
+}
+
+.image {
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+.overlay {
+    position:absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right:0;
+    height:100%;
+    width:100%;
+    opacity:0;
+    transition:.5s;
+    background-color:black;
+}
+
+.container1:hover .overlay {
+    opacity:1;
+}
+
+.text {
+    color:white;
+    position:absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%,-%50%);
+    -ms-transform:translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    text-align:center;
+}
+
+/*Video overlay text*/
+.video {
+    position:relative;
+    text-align:center;
+    color:yellow;
+    font-size: large;
+    z-index:0;
+}
+
+.overlaytext {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(50%,50%);
+    z-index:1;
+}
