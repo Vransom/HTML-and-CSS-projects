@@ -3,7 +3,7 @@
 	<head>
 		<title>My One-Page Website</title>
 		<meta charset="utf-8">
-		<link rel="stylesheet" href="./css/one_page_website.css">
+		<link rel="stylesheet" href="./CSS/one_page_website.css">
 	</head>
 	<body>
 	
@@ -14,7 +14,7 @@
 					<a href="#home" id="link"><li>HOME</li></a>
 					<a href="#gallery"><li>GALLERY</li></a>
 					<a href="#videos"><li>VIDEOS</li></a> 
-					<a href="#contact"><li>SUBSCRIBE</li></a>
+					<a href="#subscribe"><li>SUBSCRIBE</li></a>
 				</ul>
 			</div>
 		</div>
@@ -34,25 +34,71 @@
 		<section id="gallery">
 			<div>
 				<h2>Gallery</h2>
-				<div>
+
+				<!--images used in lightbox-->
+				<div class="row">
 				
 					<!--PHOTO-CONTAINER 1-->
-					<div>
-						<img src="./images/dinner.jpg" alt="Dinner" width="400" height="300">
+					<div class="column">
+						<img src="./images/dinner.jpg" alt="Dinner" width="400" height="300" onclick="openModal();currentSlide(1)" class="hover-shadow">
 					</div>
 				<!--END PHOTO-CONTAINER 1-->
 				
 				<!--PHOTO-CONTAINER 2-->
-					<div>
-						<img src="./images/skyline.jpg" alt="Skyline" width="300" height="400">
+					<div class="column">
+						<img src="./images/skyline.jpg" alt="Skyline" width="300" height="400" onclick="openModal();currentSlide(2)" class="hover-shadow">
 					</div>
 				<!--END PHOTO-CONTAINER 2-->
 				
 				<!--PHOTO-CONTAINER 3-->
-					<div>
-						<img src="./images/brunch.jpg" alt="Brunch" width="300" height="400">
+					<div column>
+						<img src="./images/brunch.jpg" alt="Brunch" width="300" height="400" onclick="openModal();currentSlide(3)" class="hover-shadow">
 					</div>
 				<!--END PHOTO-CONTAINER 3-->
+				</div>
+
+				<!--the Modal/Lightbox-->
+				<div id="myModal" class="modal">
+					<span class="close cursor" onclick="closeModal()">&times;</span>
+					<div class="modal-content">
+
+						<div class="mySlides">
+							<div class="numbertext">1/3</div>
+							<img src="./Images/dinner.jpg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">2/3</div>
+							<img src="./Images/skyline.jpg" style="width:100%">
+						</div>
+
+						<div class="mySlides">
+							<div class="numbertext">3/3</div>
+							<img src="./Images/brunch.jpg" style="width:100%">
+						</div>
+
+						<!--next/previous controls-->
+						<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+						<!--caption text-->
+						<div class="caption-container">
+							<p id="caption"></p>
+						</div>
+
+						<!--thumbnail image controls-->
+						<div class="column">
+							<img class="demo" src="./Images/dinner.jpg" onclick="currentSlide(1)" alt="Dinner">
+						</div>
+
+						<div class="column">
+							<img class="demo" src="./Images/skyline.jpg" onclick="currentSlide(2)" alt="Skyline">
+						</div>
+
+						<div class="column">
+							<img class="demo" src="./Images/brunch.jpg" onclick="currentSlide(3)" alt="Brunch">
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -112,11 +158,13 @@
 			</div>
 		</section>
 		<!--End of subscribe-->
-		
+		<br>
 		<!--FOOTER-->
 		<div>
 			www.visitmiami.com &nbsp;|&nbsp; &copy; 2023
 		</div>
 		<!--END OF FOOTER-->
+
+		<script src="./JS/one_page_website.js"></script>
 	</body>
 </html>
